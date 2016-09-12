@@ -9,3 +9,8 @@ print(list2);
 #opdracht 1c:
 for i in range(3,6,1):
     print(i);
+
+#opdracht 1d:
+list3 = 'abcd'
+printlist3 = list(list3)
+print(printlist3)
