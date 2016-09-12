@@ -7,6 +7,5 @@ list2 = ['red', 'green', 'blue'];
 print(list2);
 
 #opdracht 1c:
-a= range(3,5,1);
-list3 = a;
-print(list3);
+for i in range(3,6,1):
+    print(i);
