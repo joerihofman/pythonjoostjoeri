@@ -15,9 +15,9 @@ L2 = [1, 21, 13];
 #L1 > L2
 #Result: True; the first value of both lists are compared.
 
-
-
-
+#d
+#d = [x for x in L2]
+#print(d)
 
 #e
 #[x for x in L1 if x in L1]
