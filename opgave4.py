@@ -18,7 +18,7 @@ L2 = [1, 21, 13];
 #d
 #d = [x for x in L2]
 #print(d)
- 
+
 #e
 #[x for x in L1 if x in L1]
 #result: [30, 1, 2, 1, 0]; the statement reads the list, puts in the value of each x on place x, if x is in L1
