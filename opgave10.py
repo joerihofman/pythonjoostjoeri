@@ -1,0 +1,4 @@
+string = 'ATGTCGGGCTAAATTAGAGCCAGTCACACTTAGAATAAGTAGATTGATAGGGACCATCTCAACTCTAAATGTATCCATTGTGTAG'
+listGenTypes = ['ATG','TAG','TAA','TGA']
+
+#proberen om te laten zien hoeveel van elk er is
