@@ -15,5 +15,5 @@ for dag in regels:
     for temp in regels:
         temp += temp
     print('dag:', dag, ' temperatuur:', temp)
-
+io
 #print(regels)
