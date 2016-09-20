@@ -1,9 +1,9 @@
-import re
-stringtest = 'atgtcgggctaaattagagccagtcacacttagaataagtagattgatagggaccatctcaactctaaatgtatccattgtgtag'
+# import re
+# stringtest = 'atgtcgggctaaattagagccagtcacacttagaataagtagattgatagggaccatctcaactctaaatgtatccattgtgtag'
 #atg = 'atg'
 #tag = 'tag'
 #tta = 'tta'
-#tga = 'tga'
+
 #
 ##for c in str:
 #
@@ -15,11 +15,26 @@ stringtest = 'atgtcgggctaaattagagccagtcacacttagaataagtagattgatagggaccatctcaactct
 
 #proberen om te laten zien hoeveel van elk er is
 
-test = re.match(r'(?=atg)',stringtest)
-if test:
-    print('atg: found', test.group())
-else:
-    print('no')
+
+tga = 'tgatgatga'
+import random
+
+def naam():
+    for x in range (0,1):
+        print("atg", end="", flush=True)
+        for x in range(0,100):
+            genes = ["a", "t", "g", "c"]
+            print(random.choice(genes), end="",flush=True)
+    return
+
+print(naam().find(tga))
+
+#
+# test = re.match(r'(?=atg)',stringtest)
+# if test:
+#     print('atg: found', test.group())
+# else:
+#     print('no')
 
 
 
