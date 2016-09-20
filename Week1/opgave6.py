@@ -1,5 +1,5 @@
 
-# L = [1, 2, 3, 4, 5, 6]
+L = [1, 2, 3, 4, 5, 6]
 #
 # for i in range(1, 5):
 #     L[i] = L[i + 1]
@@ -13,7 +13,7 @@
 # print(L1)
 # print(L2)
 
-# a, b = 0, 1
-# while b < 1000:
-#     print (b)
-#     a, b = b, a+b
+a, b = 0, 1
+while b < 1000:
+    print (b)
+    a, b = b, a+b
