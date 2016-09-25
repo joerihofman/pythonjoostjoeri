@@ -1,9 +1,12 @@
 from random import randint
 BOARD_SIZE = 4
 NR_GUESSES = 4
+turn = 0
 
 #initializing board
 board = []
+userInputX=0
+userInputY=0
 
 for x in range(BOARD_SIZE):
     board.append(["O"] * BOARD_SIZE)
@@ -29,17 +32,26 @@ here your code :
 -print turn and board again here
 """
 #User input
-def userRow (Y):
+def userRow ():
     try:
         int(input('Welke plek in de rij? (0 tot 4)'))
-    except ValueError
+    except ValueError:
         print("Voer een getal in!")
+    return userInputX
 
-def userColumn (X):
+def userColumn ():
     try:
         int(input('Welke kolom? (0 tot 4)'))
-    except ValueError
+    except ValueError:
         print("Voer een getal in!")
+    global turn
+    turn += 1
+    return userInputY
+
+userRow()
+userColumn()
+print(userInputX)
+print(userInputY)
 
 
 if turn == NR_GUESSES-1:
