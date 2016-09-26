@@ -14,6 +14,8 @@ for x in range(BOARD_SIZE):
 def print_board(board):
     for row in board:
         print (" ".join(row))
+
+
 #start the game and printing the board
 print ("Let's play Battleship!")
 print_board(board)
@@ -37,6 +39,7 @@ def userRow ():
         int(input('Welke plek in de rij? (0 tot 4)'))
     except ValueError:
         print("Voer een getal in!")
+        userRow()
     return userInputX
 
 def userColumn ():
@@ -44,6 +47,7 @@ def userColumn ():
         int(input('Welke kolom? (0 tot 4)'))
     except ValueError:
         print("Voer een getal in!")
+        userColumn()
     global turn
     turn += 1
     return userInputY
@@ -52,6 +56,7 @@ userRow()
 userColumn()
 print(userInputX)
 print(userInputY)
+print(turn)
 
 
 if turn == NR_GUESSES-1:
