@@ -5,6 +5,7 @@ turn = 4
 
 userXList = []
 userYList = []
+checklist = [0,1,2,3]
 
 #initializing board
 board = []
@@ -42,7 +43,12 @@ def userRow ():
     except ValueError:
         print("Voer een getal in!")
         userRow()
+    global checklist
+    if not userx in checklist:
+        print("Getal niet tussen 0 en 4")
+        userRow()
     global userXList
+    #if not userXList:
     userXList.append(userx)
 
 def userColumn ():
