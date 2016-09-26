@@ -45,11 +45,12 @@ def userRow ():
         userRow()
     global checklist
     if not userx in checklist:
-        print("Getal niet tussen 0 en 4")
+        print("Getal niet tussen 0 en 4!")
         userRow()
-    global userXList
-    #if not userXList:
-    userXList.append(userx)
+    else:
+        global userXList
+        #if not userXList:
+        userXList.append(userx)
 
 def userColumn ():
     try:
@@ -57,16 +58,40 @@ def userColumn ():
     except ValueError:
         print("Voer een getal in!")
         userColumn()
-    global turn
-    turn -= 1
-    global userYList
-    userYList.append(usery)
+    if not usery in checklist:
+        print("Getal niet tussen 0 en 4!")
+        userColumn()
+    else:
+        global turn
+        turn -= 1
+        global userYList
+        userYList.append(usery)
 
+def guessedSpot():
+    if turn == 3:
+        userXList[0]
+        userYList[0]
+        print("Je invoer: X",userXList[0],"Y:",userYList[0])
+    elif turn == 2:
+        userXList[1]
+        userYList[1]
+        print("Je invoer: X",userXList[1],"Y:",userYList[1])
+    elif turn == 1:
+        userXList[2]
+        userYList[2]
+        print("Je invoer: X",userXList[2],"Y:",userYList[2])
+    elif turn == 0:
+        userYList[3]
+        userXList[3]
+        print("Je invoer: X",userXList[3],"Y:",userYList[3])
+    else:
+        print('Er ging iets heel fout')
 
 while turn > NR_GUESSES:
     userRow()
     userColumn()
-    print(userXList)
-    print(userYList)
-    print(turn)
+    guessedSpot()
+    print_board(board)
+    #print(guessedSpot())
+    print("Beurt ",turn)
 print("Game Over")
