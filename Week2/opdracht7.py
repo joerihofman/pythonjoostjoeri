@@ -66,6 +66,8 @@ def userColumn ():
     else:
         global turn
         turn -= 1
+        global NR_GUESSES
+        NR_GUESSES += 1
         global userYList
         userYList.append(usery)
 
@@ -91,7 +93,7 @@ def guessedSpot():
         print('Er ging iets heel fout')
 
 
-while turn > NR_GUESSES:
+while turn > 0:
     userRow()
     userColumn()
     x0,x1 = guessedSpot()
