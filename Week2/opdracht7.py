@@ -89,14 +89,16 @@ def guessedSpot():
     else:
         print('Er ging iets heel fout')
 
-
 while turn > NR_GUESSES:
     userRow()
     userColumn()
+    
     x0,x1 = guessedSpot()
-    if x0==ship_row&x1==ship_col:
+    if x0==ship_row and x1==ship_col:
         print("fucking raak")
-    print_board(board)
-    #print(guessedSpot())
-    print("Beurt ",turn)
+        break
+    else:
+        print_board(board)
+        #print(guessedSpot())
+        print("Beurt ",turn)
 print("Game Over")
