@@ -31,11 +31,11 @@ print(ship_col)
 """
 here your code :
 *-ask the user for a guess
--warn if the guess is out of the board
+*-warn if the guess is out of the board
 -warn if the guess was already made > Gebruik functie intersect in een lijst met alle die al geweest zijn.
 -if the guess is wrong, mark the point with an X and start again
--print turn and board again here
--if the user's right, the game ends
+*-print turn and board again here
+*-if the user's right, the game ends
 """
 #User input
 
@@ -71,20 +71,21 @@ def userColumn ():
 
 def guessedSpot():
     if turn == 3:
-        userXList[0]
-        userYList[0]
-        return(userXList[0],userYList[0])
+        #userXList[0]
+        #userYList[0]
+        print("Je invoer: X",userXList[0],"Y:",userYList[0])
+        return(userXList[0], userYList[0])
     elif turn == 2:
-        userXList[1]
-        userYList[1]
+        #userXList[1]
+        #userYList[1]
         return(userXList[1],userYList[1])
     elif turn == 1:
-        userXList[2]
-        userYList[2]
+        #userXList[2]
+        #userYList[2]
         return(userXList[2],userYList[2])
     elif turn == 0:
-        userYList[3]
-        userXList[3]
+        #userYList[3]
+        #userXList[3]
         return(userXList[3],userYList[3])
     else:
         print('Er ging iets heel fout')
