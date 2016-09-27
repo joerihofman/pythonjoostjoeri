@@ -1,3 +1,13 @@
+"""
+here your code :
+*-ask the user for a guess
+*-warn if the guess is out of the board
+-warn if the guess was already made > Gebruik functie intersect in een lijst met alle die al geweest zijn.
+-if the guess is wrong, mark the point with an X and start again
+*-print turn and board again here
+*-if the user's right, the game ends
+"""
+
 from random import randint
 BOARD_SIZE = 4
 NR_GUESSES = 0
@@ -17,7 +27,6 @@ def print_board(board):
     for row in board:
         print (" ".join(row))
 
-
 #start the game and printing the board
 print ("Let's play Battleship!")
 print_board(board)
@@ -28,17 +37,7 @@ ship_col = randint(0, BOARD_SIZE-1)
 print(ship_row)
 print(ship_col)
 
-"""
-here your code :
-*-ask the user for a guess
-*-warn if the guess is out of the board
--warn if the guess was already made > Gebruik functie intersect in een lijst met alle die al geweest zijn.
--if the guess is wrong, mark the point with an X and start again
-*-print turn and board again here
-*-if the user's right, the game ends
-"""
 #User input
-
 def userRow ():
     try:
         userx = int(input('Welke plek in de rij? (0 tot 4)'))
@@ -73,26 +72,34 @@ def userColumn ():
 
 def guessedSpot():
     if turn == 3:
-        #userXList[0]
-        #userYList[0]
         print("Je invoer: X",userXList[0],"Y:",userYList[0])
         return(userXList[0], userYList[0])
     elif turn == 2:
-        #userXList[1]
-        #userYList[1]
         return(userXList[1],userYList[1])
     elif turn == 1:
-        #userXList[2]
-        #userYList[2]
         return(userXList[2],userYList[2])
     elif turn == 0:
-        #userYList[3]
-        #userXList[3]
         return(userXList[3],userYList[3])
     else:
         print('Er ging iets heel fout')
 
+while turn > 0:
+    userRow()
+    userColumn()
+    x0,x1 = guessedSpot()
+    if x0==ship_row and x1==ship_col:
+        print("fucking raak")
+        break
+    else:
+        print_board(board)
+        #print(guessedSpot())
+        print("Beurt ",turn)
+print("Game Over")
+
 """
+Deze functie controleerd de invoer van de gebruiker middels een lijst. Niet af en werkt niet helemaal.
+Checkt nu alleen de ingevoerde waarde.
+
 def prevturncheck():
     global userXList
     global userYList
@@ -104,17 +111,3 @@ def prevturncheck():
     if x2 == userXList[x4] and x3 == userYList[x4] and x4 > 0:
         print("deze positie is al ingevoerd")
 """
-
-while turn > 0:
-    userRow()
-    userColumn()
-    prevturncheck()
-    x0,x1 = guessedSpot()
-    if x0==ship_row and x1==ship_col:
-        print("fucking raak")
-        break
-    else:
-        print_board(board)
-        #print(guessedSpot())
-        print("Beurt ",turn)
-print("Game Over")
