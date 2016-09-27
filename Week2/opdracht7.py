@@ -25,6 +25,8 @@ print_board(board)
 #define where the ship is
 ship_row = randint(0, BOARD_SIZE-1)
 ship_col = randint(0, BOARD_SIZE-1)
+print(ship_row)
+print(ship_col)
 
 """
 here your code :
@@ -71,26 +73,29 @@ def guessedSpot():
     if turn == 3:
         userXList[0]
         userYList[0]
-        print("Je invoer: X",userXList[0],"Y:",userYList[0])
+        return(userXList[0],userYList[0])
     elif turn == 2:
         userXList[1]
         userYList[1]
-        print("Je invoer: X",userXList[1],"Y:",userYList[1])
+        return(userXList[1],userYList[1])
     elif turn == 1:
         userXList[2]
         userYList[2]
-        print("Je invoer: X",userXList[2],"Y:",userYList[2])
+        return(userXList[2],userYList[2])
     elif turn == 0:
         userYList[3]
         userXList[3]
-        print("Je invoer: X",userXList[3],"Y:",userYList[3])
+        return(userXList[3],userYList[3])
     else:
         print('Er ging iets heel fout')
+
 
 while turn > NR_GUESSES:
     userRow()
     userColumn()
-    guessedSpot()
+    x0,x1 = guessedSpot()
+    if x0==ship_row&x1==ship_col:
+        print("fucking raak")
     print_board(board)
     #print(guessedSpot())
     print("Beurt ",turn)
