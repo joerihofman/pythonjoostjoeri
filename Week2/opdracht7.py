@@ -92,10 +92,23 @@ def guessedSpot():
     else:
         print('Er ging iets heel fout')
 
+"""
+def prevturncheck():
+    global userXList
+    global userYList
+    x2,x3 = guessedSpot()
+    x4 = NR_GUESSES-2
+    print(x2,x3,x4,NR_GUESSES)
+    print(userXList[x4],userYList[x4])
+   # userXList[x4], userYList[x4]
+    if x2 == userXList[x4] and x3 == userYList[x4] and x4 > 0:
+        print("deze positie is al ingevoerd")
+"""
 
 while turn > 0:
     userRow()
     userColumn()
+    prevturncheck()
     x0,x1 = guessedSpot()
     if x0==ship_row and x1==ship_col:
         print("fucking raak")
