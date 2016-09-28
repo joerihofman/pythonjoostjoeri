@@ -10,7 +10,10 @@ def analyze_file(filename):
         infile = open(filename, "r")
     
         # ... create a list counts ...
+        counts = []
         # ... for each line call count_letters ...
+        for lines in infile:
+            count_letters(lines, counts)
 
         infile.close()
         
@@ -22,6 +25,7 @@ def analyze_file(filename):
 # count each letter in the string 
 def count_letters(line, counts): 
     # ... for each char in line fill counts ...
+    counts.append(len(line))
     pass
 
 def open_file():
