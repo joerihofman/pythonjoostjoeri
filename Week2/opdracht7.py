@@ -125,19 +125,19 @@ Checkt nu alleen de ingevoerde waarde.
 
 """
 
-for turn in range(NR_GUESSES):
-        guessrow = int(input('..row'))
-        guescolumn = int(input('..column'))
+for beurt in range(NR_GUESSES):
+        inputx = int(input('Op welke plek in de rij wil je schieten?'))
+        inputy = int(input('Op welke plek in de kolom wil je schieten?'))
 
-        if (guessrow == ship_row) and (guescolumn == ship_col):
+        if (inputx == ship_row) and (inputy == ship_col):
             print('you won')
             break
         else:
-            if((guessrow) not in range(BOARD_SIZE)) or (guescolumn not in range(BOARD_SIZE)):
-                print('out of range')
-            elif board[guessrow][guescolumn]=='x':
-                print('you done this')
+            if((inputx) not in range(BOARD_SIZE)) or (inputy not in range(BOARD_SIZE)):
+                print('Deze plek zit niet op de kaart')
+            elif board[inputx][inputy]=='x':
+                print('Deze plek heb je al beschoten')
             else:
-                board[guescolumn][guessrow] = 'x'
+                board[inputx][inputy] = 'x'
                 print_board(board)
-print('finished')
+print('Je hebt gefaald')

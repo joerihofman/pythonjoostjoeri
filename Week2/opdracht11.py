@@ -9,17 +9,18 @@ friendships = [(0, 1), (0, 2), (1, 2), (1, 3), (2, 3), (3, 4), (4, 5),
 #    lijstVrienden.append(index)
 #print(lijstVrienden)
 
-length = len(students)
+lengte = len(students)
 i = 0
-friendlist = []
+vrienden = []
 
-while i < length:
-    friendlist.append([])
+while i < lengte:
+    vrienden.append([])
     friends = 0
     for n in friendships:
         if n[0] == i:
-            friendlist[i].append(n[1])
+            vrienden[i].append(n[1])
         elif n[1] == i:
-            friendlist[i].append(n[0])
+            vrienden[i].append(n[0])
     i += 1
-print(friendlist)
+print(vrienden)
+

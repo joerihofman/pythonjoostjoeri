@@ -29,14 +29,14 @@
 #OUTPUT: None. Dit komt, denken wij, omdat je strings niet kan vergelijken, of omdat ze even groot zijn. Daarnaast wordt smallest niet gebruikt in de een na laatste regel.
 
 #C
-def intersect(seq1, seq2):
-    res = set()
-    for x in seq1:
-        if x in seq2:
-            res.add(x)
-    return res
-print(intersect('beer', 'burger'))
-print(intersect((1,2,3,4),(1,4,2,5)))
+#def intersect(seq1, seq2):
+#    res = set()
+#    for x in seq1:
+#        if x in seq2:
+#            res.add(x)
+#    return res
+#print(intersect('beer', 'burger'))
+#print(intersect((1,2,3,4),(1,4,2,5)))
 #OUTPUT: met de functie intersect worden karakters en cijfers met elkaar vergeleken. Degene die overeenkomen worden geprint.
 
 #D
@@ -56,7 +56,7 @@ print(intersect((1,2,3,4),(1,4,2,5)))
 #Met print(v) wordt de v die door functie da is gegaan gelezen, dus is het geen 42 maar 43.
 
 #E
-"""
+
 def make(N):
     return lambda x: x**N
 square = make(2)
@@ -66,22 +66,5 @@ hyper = make(4)
 print(square(3))
 print(cube(3))
 print(hyper(3))
-"""
-#DEZE
-#MOET
-#NOG
-#
-#
-#
-#
-#
-##
-#
-#
-#
-#
-#
-###
-#
-#
-#
+
+#OUTPUT: 9, 27 en 81. bij de eerste wordt 3 * 3 gedaan, bij de tweede 3*3*3 en bij de derde 3*3*3*3
