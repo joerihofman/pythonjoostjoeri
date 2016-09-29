@@ -8,7 +8,6 @@ friendships = [(0, 1), (0, 2), (1, 2), (1, 3), (2, 3), (3, 4), (4, 5),
 #for index in students:
 #    lijstVrienden.append(index)
 #print(lijstVrienden)
-
 lengte = len(students)
 i = 0
 vrienden = []
