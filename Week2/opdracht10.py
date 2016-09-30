@@ -13,13 +13,8 @@ def userinput():
         global cnummer
         cnummer = invoer
 
-
-
-
 def nummers(number):
     return list(map(int, str(number)))
-
-
 
 def luhn_check(kaart_nummer):
     digits = nummers(kaart_nummer)
@@ -29,8 +24,6 @@ def luhn_check(kaart_nummer):
     for digit in even_digits:
         total += sum(nummers(2 * digit))
     return total % 10
-
-
 
 def bereken(gedeeltelijkNummer):
     check_getal = luhn_check(int(gedeeltelijkNummer) * 10)
