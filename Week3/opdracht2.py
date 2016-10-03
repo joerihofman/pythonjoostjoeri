@@ -15,7 +15,7 @@ bewerken. De class Stack bevat het volgende :
 
 fields         elements: list
                     (private)       list to store the elements in the stack
-methods
+me   thods
 constructor              creates an empty stack
 is_empty(): bool         returns True if the stack is empty
 peek(): object           returns the element at the top of the stack without
