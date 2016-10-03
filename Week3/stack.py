@@ -5,22 +5,23 @@ class Stack:
         else:
             self.stack = stack
 
-    def is_empty(stack):
-        if not stack:
+    def is_empty(self):
+        if not self:
             return True
         else: return False
 
-    def peek(stack):
-        if stack:
-            return stack[-len(stack)]
-        else: print("Er zit niks in de lijst")
+    def peek(self):
+        if self:
+            return len(self)
+        else:
+            print("Er zit niks in de lijst")
 
-    def push(stack, val, obj):
-        stack.append(val, obj)
+    def push(self, val):
+        self.append(val)
 
-    def pop(stack):
+    def pop(self):
 
-        return stack[-len(stack)]
+        return self[-len(self)]
 
-    def getSize(stack):
-        return len(stack)
+    def getSize(self):
+        return len(self)
