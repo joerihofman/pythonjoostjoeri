@@ -1,27 +1,18 @@
 class Stack:
-    def __init__(self, stack = None):
-        if stack is None:
-            self.stack = []
-        else:
-            self.stack = stack
+    def __init__(self):
+        self.items = []
 
     def is_empty(self):
-        if not self:
-            return True
-        else: return False
+        return self.items == []
 
     def peek(self):
-        if self:
-            return len(self)
-        else:
-            print("Er zit niks in de lijst")
+        return self.items[len(self.items)-1]
 
-    def push(self, val):
-        self.append(val)
+    def push(self, item):
+        self.items.append(item)
 
     def pop(self):
-
-        return self[-len(self)]
+        return self.items.pop()
 
     def getSize(self):
-        return len(self)
+        return len(self.items)
