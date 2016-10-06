@@ -39,7 +39,6 @@ if __name__ == '__main__':
             turn = YELLOW if turn == RED else RED
     except Exception:
         print("Deze kolom zit vol")
-        g
 """
 a) Wat is de bedoeling van de statement if __name__ == '__main__': ?
 
