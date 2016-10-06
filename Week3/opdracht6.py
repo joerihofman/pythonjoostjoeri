@@ -42,9 +42,8 @@ a) Wat is de bedoeling van de statement if __name__ == '__main__': ?
 De functie van __main__ wordt in de __name__ gezet
 
 b) In de constructor staat [[NONE] * rows for _ in range(cols)]. Wat is de betekenis van de underscore '_' ?
-Een soort weggooi variabele om aan te geven welk gedeelte van een functie
+Een soort weggooi variabele om aan te geven welk gedeelte van een functie negeerd wordt
 
-As a general purpose "throwaway" variable name to indicate that part of a function result is being deliberately ignored, as in code like:
 c) Waarom moet NONE tussen [ ] ?
 
 
