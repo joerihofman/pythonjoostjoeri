@@ -30,15 +30,18 @@ class Game:
 if __name__ == '__main__':
     g = Game()
     turn = RED
-    try:
-        while True:
+    while True:
+        try:
             error = False
             g.print_board()
             row = input('{}\'s turn: '.format('Red' if turn == RED else 'Yellow'))
             g.insert(int(row), turn)
             turn = YELLOW if turn == RED else RED
-    except Exception:
-        print("Deze kolom zit vol")
+        except Exception:
+            print("Deze kolom zit vol")
+            continue
+
+
 """
 a) Wat is de bedoeling van de statement if __name__ == '__main__': ?
 
