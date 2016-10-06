@@ -45,7 +45,7 @@ a) Wat is de bedoeling van de statement if __name__ == '__main__': ?
 
 
 b) In de constructor staat [[NONE] * rows for _ in range(cols)]. Wat is de betekenis van de underscore '_' ?
-
+Een soort weggooi variabele om aan te geven welk gedeelte van een functie negeerd wordt
 
 c) Waarom moet NONE tussen [ ] ?
 Dan wordt de lijst gevuld met punten

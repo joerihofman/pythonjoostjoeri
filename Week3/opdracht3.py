@@ -9,6 +9,8 @@ for i in range(1, size + 1):
 stopWatch.stopa()
 print("The loop time is", stopWatch.get_elapsed_time(), "milliseconds")
 
+
+
 """
 De class StopWatch implementeert een eenvoudige stopwatch. De class StopWatch bevat het volgende:
 fields startTime en endTime
