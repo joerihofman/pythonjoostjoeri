@@ -1,11 +1,12 @@
 from Week3.stop_watch import StopWatch
 size = 1000000
 stopWatch = StopWatch()
+stopWatch.starta()
 sum = 0
 for i in range(1, size + 1):
     sum += i
 
-stopWatch.stop()
+stopWatch.stopa()
 print("The loop time is", stopWatch.get_elapsed_time(), "milliseconds")
 
 """
