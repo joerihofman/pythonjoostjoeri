@@ -8,8 +8,8 @@ for i in range(10):
 while not stack.is_empty():
      print(stack.pop(), end = " ")
 
-"""
 
+"""
 De Stack class maakt het mogelijk om objecten in een stapel te bewaren en biedt operaties om de stack te
 bewerken. De class Stack bevat het volgende :
 
