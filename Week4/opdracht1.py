@@ -16,10 +16,24 @@ lijnen die deze grenzen aangeven.
 f) Demonstreer het resultaat aan de docent
 
 """
+from tkinter import*
+from random import randint
+import time
+
+def value_to_y(val):
+    return 550-5*val
+
+s = 1
+x2 = 50
+y2 = value_to_y(randint(0,100))
 
 class Plot:
     def __init__(self):
-        self.canvas =
+        self.canvas = Tk()
+        self.canvas.title('Simple Plot')
+        self.canvas = Canvas(Tk(), width=1200, height=600, bg='white')
+        self.canvas.pack(expand=YES, fill=BOTH)
+
 
     def step(self):
         global s, x2, y2
@@ -27,12 +41,12 @@ class Plot:
             # new frame
             s = 1
             x2 = 50
-            canvas.delete('temp')  # only delete items tagged as temp
+            self.canvas.delete('temp')  # only delete items tagged as temp
         x1 = x2
         y1 = y2
         x2 = 50 + s * 50
         y2 = value_to_y(randint(0, 100))
-        canvas.create_line(x1, y1, x2, y2, fill='blue', tags='temp')
+        self.canvas.create_line(x1, y1, x2, y2, fill='blue', tags='temp')
         # print(s, x1, y1, x2, y2)
         s = s + 1
-        canvas.after(300, step)
+        self.canvas.after(300, step)
