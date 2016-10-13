@@ -41,7 +41,6 @@ if __name__ == '__main__':
             print("Deze kolom zit vol")
             continue
 
-
 """
 a) Wat is de bedoeling van de statement if __name__ == '__main__': ?
 
