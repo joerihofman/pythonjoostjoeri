@@ -28,7 +28,7 @@ x2 = 50
 y2 = value_to_y(randint(0,100))
 
 class Plot:
-    def __init__(self):
+    def __init__(self, val):
         self.canvas = Tk()
         self.canvas.title('Simple Plot')
         self.canvas = Canvas(Tk(), width=1200, height=600, bg='white')

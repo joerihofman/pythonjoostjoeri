@@ -149,4 +149,55 @@ def train_and_test_model(path):
 
 if __name__ == "__main__":
     #train_and_test_model(r"c:\spam\*\*")
-    train_and_test_model(r"D:\Dropbox\Python\weekopgaven\week 4\data\*\*")
+    train_and_test_model(r"D:\School\Jaar 2\Blok 2.1\Python\data\*\*")
+"""
+
+Vragen over het algoritme
+a) Waarom mogen P(V|S) en P(V| ~S) niet nul zijn ?
+Omdat je niet kan controleren op spam als er geen waardes zijn
+
+b) Is de aanname dat P(S) = P(~S) = 0.5 wel juist ?
+Het is een aanname, dus dat is niet geheel van belang.
+
+c) Hoeveel mails worden geclassificeerd (test set) ? Welk deel is dit van de totale set ?
+17+19+178+108=322
+
+d) Hoeveel 'True Positives' zijn er (mails die correct als spam zijn herkend) ?
+107
+
+e) Hoeveel 'True Negatives' zijn er (mails die die correct als ham zijn herkend) ?
+20
+
+f) Hoeveel 'positives' zijn er in totaal ?
+17+107 = 124
+
+g) Hoe goed ons model is kan worden uitgedrukt in precision en recall. Bereken deze precision en recall. Zie
+https://en.wikipedia.org/wiki/Precision_and_recall.
+precision = true positives / (true positives + false positives) => 107 / (107 + 17) = 0,86
+recall = true positives / (true positives + false negatives) +> 107 / (107 + 178) = 0,38
+
+h) Wat is denk je belangrijker : het voorkomen van false positives of het voorkomen van false negatives ?
+Waarom ?
+Het voorkomen van false negatives, die worden fout geintrepeteerd als niet spam, terwijl die wel spam zijn
+
+i) Welke woorden zijn het meest relevant voor het herkennen van spam ?
+Only, Systemworks, Home, Rates, Adv
+
+j) Pas een aantal subject headers van de spam mails aan en voeg het woord "xyz" toe. Hoe beïnvloedt dit je
+resultaat ?
+Na de aanpassingen staat xyz op de eerste plek
+
+k) Het zou het beste zijn als de trainingset niet een algemene set mails is, maar bestaat uit de mails die jij hebt
+ontvangen. Waarom is dit zo ?
+Omdat de filter dan beter zou werken voor de mails die je zelf krijgt
+
+l) (r. 106) Wat doet de functie split_data ? Wat is de betekenis van de 0.75 ? Als je het resultaat van het
+programma bekijkt (vraag (c)) klopt dit dan precies ?
+Bij mij kan split data niet gevonden worden, ik kan mij voorstellen dat het te maken heeft met 75% van het geheel
+
+m) (r. 85) Leg uit wat deze statement doet : is_spam = "ham" not in fn
+Een bestand is niet spam als het in een map staat met in de titel het woord 'ham'
+
+n) (r. 67) Wat wordt terug gegeven als resultaat bij de call naar word_probabilities() ?
+De word_counts wordt gereturned in een lijst van triplets
+"""
