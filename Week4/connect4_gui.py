@@ -17,7 +17,10 @@ class Board:
     
     def won(self):
         return False
-
+"""
+PLAYER EN OPPONENT MOETEN GEBRUIKT WORDEN
+Ze worden nog nergens gebruikt namelijk...dat is dus wel logisch dat die gebruikt moeten worden
+"""
 class GUI:
  
   def __init__(self):
