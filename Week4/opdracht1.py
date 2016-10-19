@@ -61,5 +61,4 @@ class Plot:
         self.canvas.create_line(x1, y1, x2, y2, fill='blue', tags='temp')
         # print(s, x1, y1, x2, y2)
         s = s + 1
-        self.canvas.after(300, step())
-        self.root.mainloop()
+
