@@ -18,7 +18,7 @@ f) Demonstreer het resultaat aan de docent
 """
 from tkinter import*
 from random import randint
-import time
+from time import time,sleep
 
 def value_to_y(val):
     return 550-5*val
@@ -29,11 +29,14 @@ y2 = value_to_y(randint(0,100))
 
 class Plot:
     def __init__(self):
+        Ymin = int(input('Ymin:'))
+        Ymax = int(input('Ymax:'))
         self.root = Tk()
         self.root.title('Simple Plot')
         self.canvas = Canvas(Tk(), width=1200, height=600, bg='white')#0,0 =topleftcorner
         self.canvas.pack(expand=YES, fill=BOTH)
         Button(self.root, text='Quit', command=self.root.quit).pack()
+        Button(self.root, text='Pause', command=self.root.sleep(2))
         self.canvas.create_line(50,550,1150,550, width=2)
         self.canvas.create_line(50,550,50,50, width=2)
         for i in range(23): #x-axis
