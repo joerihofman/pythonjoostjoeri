@@ -31,6 +31,11 @@ class Plot:
     def __init__(self):
         Ymin = int(input('Ymin:'))
         Ymax = int(input('Ymax:'))
+        if 0 <= Ymin <= Ymax <= 100:
+            pass
+        else:
+            print("voer de juiste getallen in")
+            exit()
         self.root = Tk()
         self.root.title('Simple Plot')
         self.canvas = Canvas(Tk(), width=1200, height=600, bg='white')#0,0 =topleftcorner
@@ -42,8 +47,8 @@ class Plot:
         for i in range(23): #x-axis
             x = 50+(i*50)
             self.canvas.create_line(x, 550, x, 50, width=1, dash=(2, 5))
-            self.canvas.create_text(x, 550, text='%d' % (10 * i), anchor=N)
-        for i in range(11):
+            self.canvas.create_text(x, 550, text='%d' % (10 * i), anchor=N, label="Xas")
+        for i in range(Ymax-Ymin):
             y = 550 - (i * 50)
             self.canvas.create_line(50, y, 1150, y, width=1, dash=(2, 5))
             self.canvas.create_text(40, y, text='%d' % (10 * i), anchor=E)
